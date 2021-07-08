@@ -1,0 +1,17 @@
+.continentName{
+    font-size: 2rem;
+    color: black;
+}
+
+.continentName:hover{
+    color: lightblue;
+}
+
+.countryName{
+    font-size: 1rem;
+    color: rgb(138, 138, 138);
+}
+
+.countryName:hover{
+    color: lightblue;
+}
