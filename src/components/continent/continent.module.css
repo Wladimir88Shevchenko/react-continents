@@ -15,3 +15,13 @@
 .countryName:hover{
     color: lightblue;
 }
+
+.langLiStyle{
+    font-size: 0.75rem;
+    color: purple;
+}
+
+.langLiStyle:hover{
+    color: black;
+    cursor: pointer;
+}

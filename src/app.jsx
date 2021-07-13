@@ -16,6 +16,9 @@ const LIST_COUNTRIES = gql`
   countries {
     name
     code
+    languages{
+      name
+    }
     continent{
       name
     }
@@ -26,6 +29,7 @@ const LIST_COUNTRIES = gql`
 // create a component that renders a select input for coutries
 const App = () => {
   const { data, loading, error } = useQuery(LIST_COUNTRIES, { client });
+
 
   if (loading || error) {
     return <p>{error ? error.message : <Loader />}</p>;
@@ -52,7 +56,6 @@ const App = () => {
   const continentCountry = {};
 
   [...unicalArr].forEach((continent) => continentCountry[continent] = createContinentWithCountryes(continent, data.countries));
-
 
   return (
     <div className="container">
